@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .red {
+        /* .red {
             background: #ff0000;
             display: inline-block;
-        }
+        } */
     </style>
 </head>
 
@@ -132,26 +132,33 @@
             </form>
 
             <hr>
-            <form action="www.google.com" disabled>
-                <fieldset>
+            <form action="www.google.com">
+                <fieldset disabled>
                     <legend>这里面的全都禁用了</legend>
 
                     <input type="text">
                     <input type="text">
                     <input type="text">
                     <input type="text">
+
                 </fieldset>
                 <button type="submit">提交</button>
                 <button type="reset">重置</button>
+
             </form>
 
             <hr>
-            <p>货品列表</p>
-            <table border="1px">
+
+            <table border="1px" cellspacing=0>
+                <caption>货品列表</caption>
+                <col>
+                <col bgcolor="red">
+                <!-- <rows>
+                    <rows bgcolor="yellow"> -->
                 <tr>
                     <td>编号</td>
 
-                    <td class="red">品名</td>
+                    <td>品名</td>
 
                     <td>进价</td>
                     <td>出价</td>
@@ -159,20 +166,20 @@
                 <tr>
                     <td>001</td>
 
-                    <td class="red">苹果</td>
+                    <td>苹果</td>
 
                     <td rowspan="2">5</td>
                     <td>8</td>
                 </tr>
                 <tr>
                     <td>001</td>
-                    <td class="red">橘子</td>
+                    <td>橘子</td>
                     <td>8</td>
                 </tr>
                 <tr>
                     <td>001</td>
 
-                    <td class="red">香蕉</td>
+                    <td>香蕉</td>
 
                     <td>5</td>
                     <td>8</td>
@@ -180,7 +187,7 @@
                 <tr>
                     <td>001</td>
 
-                    <td class="red">山竹</td>
+                    <td>山竹</td>
 
                     <td>5</td>
                     <td>8</td>
