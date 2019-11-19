@@ -132,13 +132,14 @@
             </form>
 
             <hr>
-            <form action="www.google.com">
+            <form action="www.google.com" disabled>
                 <fieldset>
                     <legend>这里面的全都禁用了</legend>
-                    <button disabled></button>
-                    <button disabled></button>
-                    <button disabled></button>
-                    <button disabled></button>
+
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
                 </fieldset>
                 <button type="submit">提交</button>
                 <button type="reset">重置</button>
@@ -165,7 +166,6 @@
                 </tr>
                 <tr>
                     <td>001</td>
-
                     <td class="red">橘子</td>
                     <td>8</td>
                 </tr>
@@ -187,7 +187,15 @@
                 </tr>
             </table>
             <hr>
-            <img src="maotouying.jpg" alt="" title="abc" width="100px">
+            <img src="maotouying.jpg" alt="" title="abc" width="300px" usemap="#maotouying">
+            <map name="maotouying">
+                <area shape="rect" coords="48,99,208,193" href="https://www.mi.com" alt="猫头鹰" target="_blank">
+                <area shape="circle" coords="131,267,55" href=" " target="_self" alt="aaa">
+            </map>
+            <hr>
+            <p><a href="http://www.mi.com" target="abc">点击我会在下面的frame里打开小米商场，但为什么打不开呢？</a></p>
+            <iframe src="https://nodejs.org/en/" frameborder="1" name="abc">对不起浏览器不支持该iframe,请使用google浏览器</iframe>
+
             <hr>
             <div>怎样&nbsp;&nbsp;&nbsp;&nbsp;这两个字中间空这么大呢？</div>
             <p>怎样在页面中显示下面的内容呢？</p>
