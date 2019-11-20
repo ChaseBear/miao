@@ -12,6 +12,8 @@
             display: inline-block;
         } */
     </style>
+    <!-- 当打印的时候自动执行print.css -->
+    <link rel="stylesheet" href="print.css" media="print">
 </head>
 
 <body>
@@ -39,7 +41,8 @@
             <hr>
             <marquee behavior="" direction="left">飘~~</marquee>
             <em>这几种强调</em><strong>有什么区别呢？</strong> <u>&nbsp&nbsp这个呢？</u> <i>这个呢？</i>
-            <!-- 这段注释需要出现在页面里面 -->
+            <br>
+            &lt;!-- 这段注释需要出现在页面里面 -->
             <br>
             html的注释怎么写
             <br>
@@ -81,52 +84,70 @@
                 <dd>豆豆</dd>
             </dl>
             <hr>
-            <strong>Google搜索</strong>
+
             <form action="www.google.com" target="_blank">
-                <input type="text" name="connent" placeholder="请输入想要搜索的内容">
-                <button type="submit">在新窗口打开搜索结果</button>
+                <h3>Google搜索</h3>
+                <input type="text" name="input" placeholder="请输入想要搜索的内容">
+                <!-- button按钮默认是submit -->
+                <button type="submit" name="submit">在新窗口打开搜索结果</button>
             </form>
             <hr>
             <form action="www.google.com">
                 <p>个人信息调查表</p>
                 <dl>
-                    <dt>性别
-                        <input type="radio"> 男
-                        <input type="radio"> 女
-                    </dt>
+                    <dt>性别</dt>
+                    <dd>
+                        <label for="male"><input type="radio" name="gender" value="male" id="male">男</label>
+                        <label for="female"><input type="radio" name="gender" value="female" id="female"> 女</label>
+                        </dt>
+                    <dt>多选题</dt>
+                    <dd>
+                    <dt><label for="liuguanzhang">以下哪些是桃园三结义的人物：</label></dt>
+                    <dd>
+                        <input type="checkbox" value="zhangfei" name="liuguanzhang" id="liuguanzhang">A: 张飞
+                        <input type="checkbox" value="guanyu" name="guanyu" id="liuguanzhang">B：关羽
+                        <input type="checkbox" value="human" name="A" id="liuguanzhang">C：刘备
+                        <input type="checkbox" value="human" name="A" id="A">D：曹操
+                    </dd>
+                    </dd>
+
 
                     <dt>年龄</dt>
                     <dd>
-                        <select>
-                            <option value="1" selected hidden>请选择</option>
+                        <select name="age">
+                            <option value="" selected hidden>请选择</option>
                             <optgroup label="少年">
-                                <option value="age">1-6岁</option>
-                                <option value="age">6-12岁</option>
+                                <option value="1-6">1-6岁</option>
+                                <option value="6-12">6-12岁</option>
                             </optgroup>
                             <optgroup label="青年">
-                                <option value="">13-15岁</option>
-                                <option value="">16-18岁</option>
+                                <option value="13-15">13-15岁</option>
+                                <option value="16-18">16-18岁</option>
                             </optgroup>
                             <optgroup label="壮年">
-                                <option value="">18-22岁</option>
-                                <option value="">23-30岁</option>
+                                <option value="18-22">18-22岁</option>
+                                <option value="23-30">23-30岁</option>
                             </optgroup>
 
                         </select>
                     </dd>
 
                     <dt> 生日</dt>
-                    <dd><input type="date"></dd>
+                    <dd><input type="date" name="date"></dd>
                     <dt>生辰</dt>
-                    <dd><input type="time"></dd>
+                    <dd><input type="time" name="time"></dd>
                     <dt>照片</dt>
-                    <dd><input type="file" hidden>我上传照片，我比文件上传按钮好看</dd>
+                    <dd><input type="file" name="photo" hidden>我上传照片，我比文件上传按钮好看</dd>
                     <dt>肤色</dt>
-                    <dd><input type="color"></dd>
+                    <dd><input type="color" name="color"></dd>
                     <dt>自我介绍</dt>
                     <dd><textarea name="" id="" cols="30" rows="10">
                             &lt;textrea>
                         </textarea>]
+                    </dd>
+
+                    <dd>
+                        <button type="submit" value="提交">提交</button>
                     </dd>
                 </dl>
             </form>
@@ -155,6 +176,7 @@
                 <col bgcolor="red">
                 <!-- <rows>
                     <rows bgcolor="yellow"> -->
+                <!-- rows标签是不能用的 -->
                 <tr>
                     <td>编号</td>
 
@@ -192,12 +214,14 @@
                     <td>5</td>
                     <td>8</td>
                 </tr>
+
             </table>
             <hr>
             <img src="maotouying.jpg" alt="" title="abc" width="300px" usemap="#maotouying">
             <map name="maotouying">
                 <area shape="rect" coords="48,99,208,193" href="https://www.mi.com" alt="猫头鹰" target="_blank">
                 <area shape="circle" coords="131,267,55" href=" " target="_self" alt="aaa">
+                <area shape="poly" coords="53,82,193,82,228,251,181,385,20,286,53,82" href="" alt="" target="_blank">
             </map>
             <hr>
             <p><a href="http://www.mi.com" target="abc">点击我会在下面的frame里打开小米商场，但为什么打不开呢？</a></p>
