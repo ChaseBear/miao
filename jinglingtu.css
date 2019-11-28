@@ -1,0 +1,23 @@
+        *{
+             margin: 0;
+             padding: 0;
+             background: #000;
+        }
+        .google {
+            background: url("https://www.google.com/images/nav_logo242_hr.webp") left -50px top 0px;
+            width: 235px;
+            height: 75px;
+        }
+
+        .play {
+            background: url("https://www.google.com/images/nav_logo242_hr.webp") left -280px top -85px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .search{
+            background: url("https://www.google.com/images/nav_logo242_hr.webp") left -220px top -114px;
+            width: 40px;
+            height: 40px;
+
+        }
