@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>艺龙酒店</title>
+    <style>
+        .nav {
+            width: 1200px;
+            height: 40px;
+            margin: 0 auto;
+            background: rgb(32, 100, 200);
+        }
+
+        .ul {
+            list-style: none;
+
+        }
+
+        li {
+            display: inline-block;
+            /* height: 40px; */
+            padding: 10px;
+            text-align: center;
+            /* line-height: 40px; */
+            border-right: 1px solid #3774ce;
+            position: relative;
+
+        }
+
+        li:active {
+            background: rgb(0, 54, 121);
+        }
+
+        li>a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        li:nth-child(1) {
+            border-left: 1px solid #3774ce;
+        }
+
+        li[data-tip]::before {
+            content: attr(data-tip);
+            background: orange;
+            position: absolute;
+            bottom: 32px;
+            left: 57px;
+            font-size: 7px;
+            color: white;
+            border: 2px solid;
+            border-color: orange transparent transparent orange;
+            white-space: nowrap;
+        }
+
+        li[data-tip]::after {
+            content: " ";
+            position: absolute;
+            left: 63px;
+            bottom: 28px;
+            border: 2px solid;
+            border-color: orange transparent transparent orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li> <a href="#">首页</a></li>
+            <li><a href="#">国内酒店</a></li>
+            <li data-tip="低价促"><a href="#">海外酒店</a></li>
+            <li data-tip="新升级"><a href="#">国内•国际机票</a></li>
+            <li><a href="#">火车票</a></li>
+            <li><a href="#">汽车票</a></li>
+            <li><a href="#">商旅</a></li>
+            <li><a href="#">登录注册</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
