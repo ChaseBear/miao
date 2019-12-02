@@ -1,0 +1,27 @@
+        *{
+             margin: 0;
+             padding: 0;
+             background: #000;
+        }
+        .icon{
+               background: url("https://www.google.com/images/nav_logo242_hr.webp");
+               display: inline-block;
+        }
+        .icon-google {
+          background-position: left -50px top 0px;
+            width: 235px;
+            height: 75px;
+        }
+
+        .icon-play {
+          background-position:  left -280px top -85px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .icon-search{
+          background-position:  left -220px top -114px;
+            width: 40px;
+            height: 40px;
+
+        }
