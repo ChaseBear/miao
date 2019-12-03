@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2019 by ChaseBear (http://jsbin.com/bumowex/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style id="jsbin-css">
+    * {
+      background-color: rgba(0, 0, 0, 0.1)
+    }
+
+    input {
+      display: none
+    }
+
+    body {
+      font-size: 0;
+    }
+
+    label {
+      display: inline-block;
+      width: 268px;
+      height: 150px;
+      border: 2px solid #cbc7ca;
+      border-radius: 71px;
+      background-color: white;
+      box-sizing: border-box;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    label::before {
+      content: " ";
+      height: 136px;
+      width: 136px;
+      border-radius: 72px;
+      background-color: white;
+      display: inline-block;
+      position: absolute;
+      top: 6px;
+      left: 4px;
+      box-shadow: 0px 0px 15px 4px #cbc7ca;
+      transition: 0.5s;
+    }
+
+    input:checked+label {
+      /* background-color:#30F349;
+   */
+      box-shadow: 0 0 20px 78px #30F349 inset;
+    }
+
+    input:checked+label::before {
+      content: " ";
+      height: 136px;
+      width: 136px;
+      border-radius: 72px;
+      background-color: white;
+      display: inline-block;
+      position: absolute;
+      top: 7px;
+      left: 122px;
+      border-width: 65px;
+
+      /* box-shadow:0px 0px 5px 1px; */
+
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="up">
+  <label for="up"></label>
+
+  <!-- <input type="radio" name="" id="radio_button">
+  <label for=""></label> -->
+</body>
+
+</html>
