@@ -15,11 +15,11 @@ Released under the MIT license: http://jsbin.mit-license.org
   <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
   <style id="jsbin-css">
-    * {
+    /* * {
       background-color: rgba(0, 0, 0, 0.1)
-    }
+    } */
 
-    input {
+    .checkbox {
       display: none
     }
 
@@ -27,7 +27,7 @@ Released under the MIT license: http://jsbin.mit-license.org
       font-size: 0;
     }
 
-    label {
+    .label_c_box {
       display: inline-block;
       width: 268px;
       height: 150px;
@@ -39,7 +39,7 @@ Released under the MIT license: http://jsbin.mit-license.org
       transition: 0.5s;
     }
 
-    label::before {
+    .label_c_box::before {
       content: " ";
       height: 136px;
       width: 136px;
@@ -53,13 +53,13 @@ Released under the MIT license: http://jsbin.mit-license.org
       transition: 0.5s;
     }
 
-    input:checked+label {
+    .checkbox:checked+.label_c_box {
       /* background-color:#30F349;
    */
       box-shadow: 0 0 20px 78px #30F349 inset;
     }
 
-    input:checked+label::before {
+    .checkbox:checked+.label_c_box::before {
       content: " ";
       height: 136px;
       width: 136px;
@@ -69,20 +69,90 @@ Released under the MIT license: http://jsbin.mit-license.org
       position: absolute;
       top: 7px;
       left: 122px;
-      border-width: 65px;
+    }
 
-      /* box-shadow:0px 0px 5px 1px; */
+    .radio {
+      -webkit-appearance: none;
 
     }
+
+    .radio+label {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      border: 5px solid black;
+      border-radius: 40px;
+      box-sizing: border-box;
+      position: relative;
+      transition-property: border;
+      transition: all 300ms linear;
+    }
+
+    .radio+label::before {
+      display: none;
+      content: "";
+      width: 0px;
+      height: 0px;
+      /* border: 1px solid; */
+      /* box-shadow: 0 0 20px 20px #03bd5e; */
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      /* box-shadow: 0 0 0 20px green; */
+      border-radius: 40px;
+      box-sizing: border-box;
+      background-color: black;
+      transition: all 5s linear;
+
+    }
+
+    .radio+label:active {
+      box-shadow: 0 0 40px 40px #03bd5e;
+      transition: all 500ms linear;
+    }
+
+    .radio+label::before:active {
+      box-shadow: 0 0 40px 40px #03bd5e;
+      transition: all 500ms linear;
+    }
+
+    .radio:checked+label {
+      border: 5px solid #03bd5e;
+      transition: all 300ms linear;
+      /* opacity: 0.5; */
+    }
+
+    .radio:checked+label::before {
+      display: inline-block;
+      width: 44px;
+      height: 44px;
+      background-color: #03bd5e;
+    }
+
+    /* span {
+      display: inline-block;
+      width: 100px;
+      color: black;
+    } */
   </style>
 </head>
 
 <body>
-  <input type="checkbox" id="up">
-  <label for="up"></label>
+  <input class="checkbox" type="checkbox" id="up">
+  <label class="label_c_box" for="up"></label>
 
-  <!-- <input type="radio" name="" id="radio_button">
-  <label for=""></label> -->
+
+
+  <input class="radio" type="radio" name="button" id="radio_button">
+  <label for="radio_button"></label>
+  <span>Radio Button:</span>
+  <input class="radio" type="radio" name="button" id="radio_button_two">
+  <label for="radio_button_two"></label>
+  <span>Radio Button:</span>
+  <input class="radio" type="radio" name="button" id="radio_button_three">
+  <label for="radio_button_three"></label>
+  <span>Radio Button:</span>
+
 </body>
 
 </html>
