@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+
+        ul li {
+            position: relative;
+            white-space: nowrap;
+            padding: 10px;
+        }
+
+        ul.menu>li {
+            display: inline-block;
+
+        }
+
+        li:hover>ul {
+            display: block;
+
+        }
+
+        li:hover>ul {
+            display: block;
+
+        }
+
+        li li:hover {
+            background: #094771;
+        }
+
+        .menu>li:hover {
+            background: #505050;
+        }
+
+        ul ul ul {
+            top: 0%;
+            left: 100%;
+        }
+
+        ul li li:nth-child(3) {
+            border-bottom: 1px solid blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li>file
+            <ul>
+                <li>保存文件
+                    <ul>
+                        <li>保存文件</li>
+                        <li>打开
+                            <ul>
+                                <li>保存文件</li>
+                                <li>打开</li>
+                                <li>file</li>
+                                <li>window</li>
+                                <li>lsit</li>
+                            </ul>
+                        </li>
+                        <li>file<ul>
+                                <li>保存文件</li>
+                                <li>打开
+                                    <ul>
+                                        <li>保存文件</li>
+                                        <li>打开</li>
+                                        <li>file</li>
+                                        <li>window</li>
+                                        <li>lsit</li>
+                                    </ul>
+                                </li>
+                                <li>file</li>
+                                <li>window</li>
+                                <li>lsit</li>
+                            </ul>
+                        </li>
+                        <li>window</li>
+                        <li>lsit</li>
+                    </ul>
+                </li>
+                <li>打开
+                    <ul>
+                        <li>保存文件</li>
+                        <li>打开</li>
+                        <li>file</li>
+                        <li>window</li>
+                        <li>lsit</li>
+                    </ul>
+                </li>
+                <li>file
+                    <ul>
+                        <li>保存文件</li>
+                        <li>打开</li>
+                        <li>file</li>
+                        <li>window</li>
+                        <li>lsit</li>
+                    </ul>
+                </li>
+                <li>window</li>
+                <li>lsit</li>
+            </ul>
+        </li>
+        <li>edit
+            <ul>
+                <li>保存文件
+                    <ul>
+                        <li>保存文件</li>
+                        <li>打开</li>
+                        <li>file</li>
+                        <li>window</li>
+                        <li>lsit</li>
+                    </ul>
+                </li>
+                <li>打开</li>
+                <li>file</li>
+                <li>window</li>
+                <li>lsit</li>
+            </ul>
+        </li>
+
+        <li>selection
+            <ul>
+                <ul>
+                    <li>保存文件</li>
+                    <li>打开</li>
+                    <li>file</li>
+                    <li>window</li>
+                    <li>lsit</li>
+                </ul>
+                <li>保存文件</li>
+                <li>打开</li>
+                <li>file</li>
+                <li>window</li>
+                <li>lsit</li>
+            </ul>
+        </li>
+        <li>view
+            <ul>
+                <ul>
+                    <li>保存文件</li>
+                    <li>打开</li>
+                    <li>file</li>
+                    <li>window</li>
+                    <li>lsit</li>
+                </ul>
+                <li>保存文件</li>
+                <li>打开</li>
+                <li>file</li>
+                <li>window</li>
+                <li>lsit</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
