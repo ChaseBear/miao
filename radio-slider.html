@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: rgb(0, 0, 0, 0.1)
+        }
+
+        img {
+            /* height: 300px;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%; */
+            position: relative;
+            z-index: -5;
+            width: 537px;
+        }
+
+        input {
+            display: none;
+            /* display: inline-block; */
+        }
+
+        label {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background: black;
+            position: relative;
+            top: 308px;
+            left: 221px;
+
+            z-index: 20;
+        }
+
+        [for="main_5"] {
+            position: relative;
+            top: 150px;
+            left: 0px;
+            z-index: 50;
+        }
+
+
+        [for="main_6"] {
+            position: relative;
+            top: 150px;
+            left: 400px;
+            z-index: 50;
+        }
+
+        div {
+            width: 537px;
+            height: 340px;
+            /* border: 1px solid red; */
+
+            position: relative;
+            box-sizing: border-box;
+            margin: auto;
+            overflow: hidden;
+
+        }
+
+
+
+        section {
+            position: absolute;
+            width: 2544px;
+            padding: 0;
+            height: 100%;
+            /* margin: -20px 0 -0px 0; */
+            font-size: 0;
+            margin-top: -20px;
+
+            opacity: 0.1;
+
+            /* transform: rotate(1turn); */
+
+        }
+
+        .slide_1_left {
+            position: absolute;
+        }
+
+        [class^="img_"] {
+            display: inline-block;
+
+        }
+
+        [class$="left"] {
+            position: relative;
+            top: 150px;
+            left: 10px;
+        }
+
+        [class$="right"] {
+            position: relative;
+            top: 160px;
+            left: 498px;
+        }
+
+
+
+
+
+        #main_1:checked~section {
+            position: absolute;
+            opacity: 1;
+            left: 0%;
+            transform: rotateZ(1turn);
+            transition: .5s;
+
+        }
+
+        #main_2:checked~section {
+            position: absolute;
+            opacity: 1;
+            left: -100%;
+            transform: rotateY(1turn);
+            transition: .5s;
+        }
+
+        #main_3:checked~section {
+            position: absolute;
+            opacity: 1;
+            left: -200%;
+            transform: rotateX(1turn);
+            transition: .5s;
+        }
+
+        #main_4:checked~section {
+            position: absolute;
+            opacity: 1;
+            left: -300%;
+            transform: rotate(1turn);
+            transition: .5s;
+        }
+
+        #main_5:checked~section {
+            /* position: relative;
+            opacity: 1;
+            left: -100%; */
+            margin-left: -537px;
+        }
+
+        #main_6:checked~section {
+            /* position: absolute;
+            opacity: 1;
+            left: -300%; */
+            margin-right: 537px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="main_1"></label>
+        <label for="main_2"></label>
+        <label for="main_3"></label>
+        <label for="main_4"></label>
+
+
+        <input type="radio" name="slider" id="main_1">
+        <input type="radio" name="slider" id="main_2">
+        <input type="radio" name="slider" id="main_3">
+        <input type="radio" name="slider" id="main_4">
+        <section>
+            <!-- 下面是用来写侧边栏的id -->
+            <div class="img_1">
+                <label for="main_4" class="slide_1_left">
+                    <</label> <label for="main_2" class="slide_1_right">>
+                </label>
+                <img src="../img/风景/1.webp" alt="" id="img_1">
+            </div>
+
+            <div class="img_2">
+                <label for="main_1" class="slide_2_left">
+                    <</label> <label for="main_3" class="slide_2_right">>
+                </label>
+                <img src="../img/风景/2.webp" alt="" id="img_2">
+            </div>
+
+            <div class="img_3">
+                <label for="main_2" class="slide_3_left">
+                    <</label> <label for="main_4" class="slide_3_right">>
+                </label>
+                <img src="../img/风景/3.webp" alt="" id="img_3">
+            </div>
+
+            <div class="img_4">
+                <label for="main_3" class="slide_4_left">
+                    <</label> <label for="main_1" class="slide_4_right">>
+                </label>
+                <img src="../img/风景/4.webp" alt="" id="img_4">
+            </div>
+
+
+
+
+
+
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
