@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2019 by ChaseBear (http://jsbin.com/bubucof/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+/******1.行内居中***************/
+.a1{
+        width: 200px;
+        height: 200px;
+        border:1px solid lime;
+        text-align:center;
+        line-height:200px;
+       
+}
+
+.a2{
+        display:inline-block;
+        width: 50px;
+        height: 30px;
+       background: magenta; 
+}
+/******2.绝对居中***************/
+
+.b1{
+        width: 200px;
+        height: 200px;
+        border:1px solid lime;
+        position:relative;
+ }
+
+.b2{
+            width: 50px;
+            height: 30px;
+            background: magenta; 
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+}
+/******3.绝对居中***************/
+
+.c1{
+        width: 200px;
+        height: 200px;
+        border:1px solid lime;
+       
+}
+
+.c2{
+            width: 50px;
+            height: 30px;
+            background: magenta; 
+            position:relative;  
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+               
+}
+/******4.表格居中***************/
+
+.d1{
+        width: 200px;
+        height: 200px;
+        border:1px solid lime;  
+        font-size:0;
+        display:table;    
+}
+
+.d2{ 
+           display:table-cell;
+            text-align:center;
+            vertical-align:middle;
+          /*  vertical-align:middle; */
+}
+
+.d3{
+            width: 50px;
+            height: 30px;
+            background:green;
+            display:inline-table;
+      /*  vertical-align:middle;   */
+}
+
+/******5.伪元素居中***************/
+
+.e1{
+        width: 200px;
+        height: 200px;
+        border:1px solid lime;
+        font-size:0;
+        text-align:center;
+      
+}
+
+.e2{ 
+            display:inline-block;
+            width: 50px;
+            height: 30px;
+            background:green;
+            vertical-align:middle;
+         
+           /*  vertical-align:-180px; */
+   
+}
+
+.e1::before{
+        content:"";
+        height: 100%;
+        display:inline-block;
+        vertical-align:middle;
+}
+
+
+</style>
+</head>
+<body> 
+     <h1>居中的几种方法</h1>
+     <div>
+          <h2>1.行内居中</h2>
+           <div class="a1">
+               <div class="a2">
+                   
+               </div>
+           </div>
+     </div>
+
+     <div>
+          <h2>2.绝对居中</h2>
+           <div class="b1">
+               <div class="b2">
+                     
+               </div>
+           </div>
+     </div>
+  
+         <div>
+          <h2>3.相对居中</h2>
+           <div class="c1">
+               <div class="c2">
+                     
+               </div>
+           </div>
+       </div>
+  
+        <div>
+          <h2>4.表格居中</h2>
+           <div class="d1">
+               <div class="d2">
+                     <div class="d3"></div>
+               </div>
+             
+           </div>
+       </div>
+  
+          <div>
+          <h2>5.伪元素居中</h2>
+           <div class="e1">
+               <div class="e2">
+                   
+               </div>
+             
+           </div>
+       </div>
+</body>
+</html>
