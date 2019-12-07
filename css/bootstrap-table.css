@@ -1,0 +1,143 @@
+
+        .table {
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        .table * {
+            padding: 1em 5em;
+            line-height: 40px;
+        }
+
+        .table tr {
+            border: 1px solid #DEE2E6;
+
+        }
+
+        .table td,
+        .table th {
+            text-align: left;
+        }
+
+        .table-dark {
+            background: #343A40;
+            color: #EAEAEB;
+        }
+
+        .thead-light {
+            background: #E9ECEF;
+            color: #495057;
+        }
+
+        .table-striped>tbody tr:nth-child(odd) {
+            background: #F2F2F2;
+        }
+
+        .table-striped.table-dark>tbody tr:nth-child(odd) {
+            background: #3e444A;
+        }
+
+
+        .table-bordered tr * {
+            border: 1px solid #454d55;
+        }
+
+        /***************boderless table**************/
+        table.table-borderless tr {
+            border: none;
+        }
+
+        /*************** table hover**************/
+        .table-hover.table-dark tbody tr:hover {
+            background: #43494E;
+        }
+
+        .table-hover tbody tr:hover {
+            background: #ECECEC;
+        }
+
+        /*************** table small**************/
+        .table.table-sm * {
+            padding: 0.5em 2.5em;
+        }
+
+        /*************** Contextual classes**************/
+        .table .table-active,
+        .table.table-striped .table-active {
+            background: #000;
+        }
+
+        .table .table-secondary,
+        .table.table-striped .table-secondary {
+            background: #DADADA;
+        }
+
+        .table .table-primary,
+        .table.table-striped .table-primary {
+            background: #B8DAEF;
+        }
+
+        .table .table-success,
+        .table.table-striped .table-success {
+            background: #C3E6CB;
+        }
+
+        .table .table-danger,
+        .table.table-striped .table-danger {
+            background: #F5C6C8;
+        }
+
+        .table .table-warning,
+        .table.table-striped .table-warning {
+            background: #FFEEBA;
+        }
+
+        .table .table-info,
+        .table.table-striped .table-info {
+            background: #BEE5EB;
+        }
+
+        .table .table-light,
+        .table.table-striped .table-light {
+            background: #FDFDFE;
+        }
+
+        .table .table-dark,
+        .table.table-striped .table-dark {
+            background: #C6C8CA;
+        }
+
+        .table.table-dark .bg-primary,
+        .table.table-dark.table-striped .bg-primary {
+            background: #007bef;
+            color: white;
+        }
+
+        .table.table-dark .bg-success,
+        .table.table-dark.table-striped .bg-success {
+            background: #28A745;
+            color: white;
+        }
+
+        .table.table-dark .bg-warning,
+        .table.table-dark.table-striped .bg-warning {
+            background: #17A2B8;
+            color: white;
+        }
+
+        .table.table-dark .bg-danger,
+        .table.table-dark.table-striped .bg-danger {
+            background: #FFC107;
+            color: white;
+        }
+
+        .table.table-dark .bg-info,
+        .table.table-dark.table-striped .bg-info {
+            background: #DC3145;
+            color: white;
+        }
+
+        /* Breakpoint specific */
+        .table.table-responsive-sm {
+            min-width: 500px;
+        }
