@@ -166,10 +166,10 @@ div.radio_img section{
 
 div.radio_img label[class$="img"]{
     display: inline-block;
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
     border: 2px solid rgb(152,140 ,140);
-    border-radius: 5px;
+    border-radius: 10px;
     background: white;
     position: relative;
     left: 825px;
@@ -184,9 +184,9 @@ div.radio_img>label[class$="img"]::before{
         position: absolute;
         display: inline-block;
         content: "";
-        width: 5px;
-        height: 5px;
-        border-radius: 5px;
+        width: 6px;
+        height: 6px;
+        border-radius: 10px;
         background: rgb(152, 140, 140);
         left:0px;
         top: 0px;
@@ -2398,7 +2398,7 @@ input[type="radio"]:nth-child(5):checked ~ label[class$="img"]:nth-of-type(5)::b
             width: 1160px;
             // height: 57px;
             box-sizing: border-box;
-            border: 1px solid;
+
              ul{
                 list-style: none;
                 li{
@@ -2420,7 +2420,7 @@ input[type="radio"]:nth-child(5):checked ~ label[class$="img"]:nth-of-type(5)::b
                     }
 
                     span{
-                            color: #757575;
+                            color: #b0b0b0;
 
                     }
                 }
@@ -2480,7 +2480,7 @@ input[type="radio"]:nth-child(5):checked ~ label[class$="img"]:nth-of-type(5)::b
             left:1287px;
             display: flex;
             flex-flow: column wrap;
-            justify-content: space-between;
+            // justify-content: space-between;
 
 
             ul{
@@ -2495,6 +2495,10 @@ input[type="radio"]:nth-child(5):checked ~ label[class$="img"]:nth-of-type(5)::b
                 text-align: center;
                 border:1px solid #e0e0e0;
                 background-color: #fff;
+
+                &.last-item{
+                    margin-top: 15px;
+                }
 
                 a{
                     width: 100%;
