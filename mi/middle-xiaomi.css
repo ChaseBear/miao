@@ -1,0 +1,109 @@
+  /* *{background:rgb(0,0,0,0.1);} */
+
+.main_body .nav-bar {
+     width: 660px;
+     height: 97px;
+     margin:0px 0px 0px 230px;
+     /* position: absolute;
+     top:33px;
+     left:255px; */
+ }
+
+ .main_body .nav-bar>ul{
+        height: 100%;
+        font-size: 0;
+ }
+
+ .main_body .nav-bar>ul>li{
+    display: inline-block;
+    height: 100%;
+
+}
+
+ .main_body .nav-bar>ul>li>a{
+    display:inline-block;
+    xbox-shadow: 0 0 0 2px;
+     color:black;
+     padding-right:20px;
+     text-decoration: none;
+     line-height: 97px;
+     font-size: 16px;
+      margin: 0 auto;
+}
+
+ .main_body .nav-bar ul  li a:hover{
+    color:#ff7f52;
+}
+
+.main_body .nav-bar ul section{
+    position: absolute;
+    height: 0px;
+    /* width:100%; */
+    background:white;
+    xbox-shadow: 30px 0 0px 2px #b0b0b0;
+    /* left: -319px; */
+    top:140px;
+    left:0px;
+    right: 0px;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.main_body .nav-bar ul section ul{
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    width: 1221px;
+   box-shadow: 20px 180px 2px 2px #dcdcdc;
+
+}
+.main_body .nav-bar ul section ul li{
+    float: left;
+    width: 200px;
+    height: 160px;
+
+    /* border-right: 1px solid #e0e0e0; */
+    text-align: center;
+       margin-left: 3px;
+}
+
+.main_body .nav-bar ul section ul li a img{
+     width: 160px;
+    height: 110px;
+    margin: 0 auto;
+
+
+}
+.main_body .nav-bar ul section ul li a:nth-child(2){
+    display: inline-block;
+    text-decoration: none;
+    margin-top:5px;
+    font-size: 14px;
+    width: 160px;
+    /* line-height: 50px; */
+    /* box-shadow: 0 ; */
+
+}
+.main_body .nav-bar ul section ul li a:nth-child(3){
+    display: inline-block;
+    width: 160px;
+    text-decoration: none;
+    margin-top:5px;
+    font-size: 9px;
+    color: orange;
+    font-weight: 700;
+}
+/*
+ *{
+    box-shadow: none;
+} */
+
+.main_body .nav-bar>ul>li:hover ~ section{
+    xborder-top:1px solid #e0e0e0;
+    height: 195px;
+    z-index: 180;
+
+}
+
+

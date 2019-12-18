@@ -1,0 +1,471 @@
+*{margin: 0; padding: 0;}
+/* *{background:rgb(0,0,1,0.1)} */
+.nav{
+      width: 100%;
+      height: 40px;
+      background: #333333;
+
+}
+
+.nav>.main_nav{
+    width: 1225px;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+}
+
+.nav .main_left{
+    float: left;
+    /* width: 595px; */
+    height: 100%;
+     z-index: 1;
+}
+.nav .main_right{
+    float: right;
+    height: 100%;
+    margin-right: 160px;
+     z-index: 1;
+}
+
+ul{
+  list-style: none;
+  margin: 0 ;
+  padding: 0;
+}
+/* <百分比>
+与元素自身的字体大小有关。计算值是给定的百分比值乘以元素计算出的字体大小。百分比值可能会带来不确定的结果（见下面第二个例子）。 */
+.main_nav ul li{
+    display: inline-block;
+    /* padding: 14px; */
+    height: 40px;
+    text-align: center;
+     z-index: 1;
+   /* margin-right: 7px; */
+
+}
+ .main_nav ul li.download{
+   position: relative;
+
+ }
+
+.main_nav ul span.app_download {
+    position: absolute;
+    width: 126px;
+    height: 0px;
+    left: -35px;
+    top: 41px;
+    transition: .3s;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+
+  /* .main_nav ul span.app_download::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #f8f8f8;
+    border-color: transparent transparent #f8f8f8 transparent;
+    left:20px;
+    top:30px;
+    z-index: 30;
+     border-top:none;
+    border-left:none;
+    border-right:none; */
+
+
+
+.main_nav ul span.app_download::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  border: 7px solid;
+   border-top-color: transparent;
+   border-right-color: transparent;
+   border-bottom-color: #f8f8f8;
+   border-left-color: transparent;
+   left: 42%;
+   top: -9%;
+  z-index: 0;
+}
+
+
+
+  .main_nav ul span.app_download::after{
+    content: "";
+    box-sizing: border-box;
+     position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top:0px;
+    background:url(https://i1.mifile.cn/f/i/17/appdownload/download.png?1) top 20px left 20px /70% no-repeat,#fff;
+    z-index:  0;
+  }
+
+
+    .main_nav ul span.app_download span{
+           box-sizing: border-box;
+           position: absolute;
+           width: 93px;
+           height: 20px;
+           z-index: 0;
+           top: 79%;
+           left: 15%;
+           font-size: 15px;
+           z-index:  2;
+    }
+
+
+
+
+    .main_nav ul li.download:hover span.app_download{
+         top:41px;
+         left: -35px;
+        overflow: visible;
+        height: 153px;
+        transition: .3s;
+    }
+
+
+
+
+.main_nav ul li a{
+    padding-right: 5px;
+    color:#B0B0B0;
+    font-size: 12px;
+    line-height: 40px;
+    /* padding-right: 1px; */
+    text-decoration: none;
+    border-right: 1px solid #333333;
+    /* margin-right: -3px; */
+}
+.main_right .last-child{
+    border-right: none;
+}
+.shop{
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+     left: 1077px;
+     top:0px;
+     z-index: 20;
+     background: #424242;
+     text-align: center;
+     line-height: 40px;
+     font-size: 0;
+
+}
+
+.shop .go_shopping{
+     vertical-align: middle;
+      font-size: 12px;
+      color:#B0B0B0;
+}
+
+.main_nav ul li a:hover{
+   color: white;
+}
+.shop:hover{
+   background: #fff;
+}
+
+/* 下面是小米首页中间导航部分 */
+
+.main_body{
+   width: 1225px;
+   height: 100px;
+   margin: 0px auto;
+   box-sizing: border-box;
+   /* position: relative; */
+   border: 1px solid white;
+   /* overflow: hidden; */
+   /* display: inline-block; */
+}
+/* .main_body::before{
+  content: "";
+} */
+
+.main_body .mi-logo a::before{
+  content:"";
+  width: 55px;
+  height: 55px;
+  background:  url("https://s02.mifile.cn/assets/static/image/mi-logo.png") center no-repeat #FF6700;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  transition: .3s;
+  transform: translateZ(0);
+}
+
+.main_body .mi-logo a{
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 20px;
+    overflow: hidden;
+
+}
+.main_body .mi-logo a::after{
+   content:"";
+   width: 55px;
+   height: 55px;
+   background: url("https://s02.mifile.cn/assets/static/image/mi-home.png") center no-repeat  #FF6700;
+   position: absolute;
+   /* opacity: 0; */
+   left:-55px;
+   transition: .3s;
+
+}
+
+.main_body>.mi-logo a:hover::before{
+     position: absolute;
+     /* opacity: 0; */
+     transform: translate3d(55px,0,0);
+
+}
+
+ .main_body>.mi-logo a:hover::after{
+      position: absolute;
+      left: 0px;
+      /* opacity: 1; */
+      transform: translateX(0);
+}
+
+ .main_body>.mi-logo a:active::after{
+    background-size:80%;
+}
+
+ /* .main_body .nav-bar {
+     width: 660px;
+     height: 40px;
+     position: absolute;
+     transform:translate(-50% -50%);
+     top:0;
+     bottom:0;
+     left:0;
+     right:0;
+     margin:auto;
+ }
+
+ .main_body .nav-bar ul li{
+    display: inline-block;
+
+}
+
+ .main_body .nav-bar ul li a{
+    color:black;
+    padding-right:20px;
+    text-decoration: none;
+}
+
+ .main_body .nav-bar ul li a:hover{
+    color:#ff7f52;
+} */
+/******************搜索***************/
+ .main_body .search {
+    width: 300px;
+    height: 50px;
+    float: right;
+    margin-top: 20px ;
+
+
+ }
+
+ .main_body .search .search-wrap{
+     /* display: table; */
+     height: 50px;
+     width: 100%;
+     border-collapse: collapse;
+     box-sizing: border-box;
+     /* font-size: 0px;
+     border: 1px solid #eeeeee; */
+     border: 1px solid #e9ecef;
+     position: relative;
+     font-size: 10px;
+
+
+
+ }
+
+.clearfix:after {
+    content: '';
+    height: 0;
+    display: block;
+    clear: both;
+}
+  .main_body .search .search-wrap .search-text{
+     /* display: table-cell; */
+     float: left;
+     width: 246px;
+     height: 100%;
+     border: none;
+     line-height: 100%;
+     font-size: 8px;
+     border-right:1px solid  #eeeeee;
+     position: relative;
+     z-index: 5;
+     text-indent: 2em;
+
+      /* outline: none; */
+
+ }
+ .main_body .search  .pulldown-menu{
+     width: 245px;
+     height: 300px;
+     border: 1px solid #FF6700;
+     background: #fff;
+     display: inline-block;
+     overflow: hidden;
+     display: none;
+     margin-right: 2px;
+     z-index: 50;
+ }
+
+  .main_body .search .pulldown-menu ul{
+     list-style: none;
+     margin: 0;
+     padding: 0;
+ }
+
+   .main_body .search .pulldown-menu ul li{
+          height: 33px;
+          line-height: 33px;
+          text-indent: 2em;
+
+
+ }
+    .main_body .search  .pulldown-menu ul li a{
+       color: #797979;
+       font-size: 10px;
+       text-decoration: none;
+ }
+
+
+   /* .main_body .search .search-wrap .btn-search{
+
+     width: 18%;
+     height: 100%;
+
+ } */
+
+   .main_body .search .search-wrap .submit{
+     float:right;
+      /* width: 50px; */
+      width: 51px;
+       height: 48px;
+      border: none;
+      /* outline: none; */
+       background: url("../img/icon/black-search.svg") center/contain no-repeat ;
+       /* padding:5px; */
+      background-size: 50%;
+      box-sizing: border-box;
+
+
+   }
+
+  .main_body .search .search-wrap .text-left{
+          position: absolute;
+          display: inline-block;
+          width: 85px;
+          height: 20px;
+          background-color: #eeeeee;
+          text-align: center;
+          left:60px;
+          top:50%;
+          margin: auto;
+          transform: translate(0,-45%);
+          vertical-align: middle;
+           z-index: 15;
+  }
+
+  .main_body .search .search-wrap section{
+          outline-color: #FF6700;
+          border: 1px solid #FF6700 !important;
+  }
+    .main_body .search .search-wrap .text-right{
+          position: absolute;
+          display: inline-block;
+          width: 89px;
+          height: 20px;
+          background-color: #eeeeee;
+          left: 150px;
+          top:50%;
+          transform: translate(0,-45%);
+          text-align: center;
+          vertical-align: middle;
+          z-index: 15;
+          box-sizing: border-box;
+
+  }
+
+      .main_body .search .search-wrap .btn-search:hover{
+           display: inline-block;
+           background: url("../img/icon/white-search.png") center/contain no-repeat,#FF6700 ;
+           /* padding:5px; */
+           background-size: 50%;
+           z-index: 20;
+      }
+
+
+    /* .main_body .search .search-wrap  .submit:hover{
+            background:none;
+   } */
+
+   [class^="text-"]:hover{
+                    background-color: #FF6700 !important;
+                    /* background-color: none; */
+
+                    color: white;
+   }
+
+   .main_body .search .search-wrap:hover{
+        border: 1px solid #B0B0B0;
+   }
+   .main_body .search .search-wrap .submit:hover{
+             background: url("../img/icon/white-search.png") center/contain no-repeat ,#FF6700 ;
+             background-size: 50%;
+             z-index: 50;
+
+   }
+      .main_body .search .search-wrap .search-text:hover{
+        border-right: 1px solid #B0B0B0;
+   }
+
+    .main_body .search .search-wrap .search-text:focus-within{
+
+              outline-color: #FF6700 ;
+    }
+
+       .main_body .search .search-wrap .search-text:focus + *{
+              border: none;
+              border: 1px solid #FF6700 ;
+              border-left: none;
+      }
+
+    .main_body .search .search-wrap .search-text:focus  ~ [class^="text"]{
+        display: none;
+
+    }
+    .main_body .search .search-wrap .search-text:focus + * + *{
+       border-top:none;
+      position: absolute;
+      top: 46px;
+      display: block;
+
+    }
+     .main_body .search .search-wrap section ul li:hover{
+              height: 33px;
+              width: 100%;
+              background: #FAFAFA;
+     }
+
+
+
