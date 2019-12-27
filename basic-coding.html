@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+
+<script id="ch0103/01">
+    var a = +prompt();
+    var b = +prompt();
+    console.log(a + b);
+
+</script>
+
+
+<script id="ch0103/02">
+    var a = +prompt();
+    var b = +prompt();
+    var c = +prompt();
+    console.log((a + b) * c);
+
+</script>
+
+<script id="ch0103/03">
+    var a = +prompt();
+    var b = +prompt();
+    var c = +prompt();
+    console.log((a + b) / c);
+
+</script>
+
+
+
+<script id="ch0103/04">
+    var a = +prompt();
+    var b = +prompt();
+    if (b != 0) {
+        console.log((a / b));
+        console.log((a % b));
+    }
+
+</script>
+
+<script id="ch0103/05">
+    var a = +prompt();
+    var b = +prompt();
+
+
+    console.log('%.7f', a / b);
+</script>
+
+<script id="ch0103/06">
+    var a = +prompt();
+    var b = +prompt();
+
+
+    console.log((b / a).toFixed(9));
+</script>
+
+<script id="ch0103/07">
+    var x = +prompt();
+    var a = +prompt();
+    var b = +prompt();
+    var c = +prompt();
+    var d = +prompt();
+    var output = a * x * x * x + b * x * x + c * x + d;
+
+    console.log(output.toFixed(7));
+</script>
+
+<script id="ch0103/08">
+    var x = +prompt();
+    var output = +5 * (x - 32) / 9;
+
+    console.log(output.toFixed(5));
+</script>
+
+<script id="ch0103/09">
+    var r = +prompt();
+    d = r * 2;
+    c = r * 2 * Math.PI;
+    s = Math.PI * r * r;
+
+    console.log(d.toFixed(4));
+    console.log(c.toFixed(4));
+    console.log(s.toFixed(4));
+</script>
+
+<script id="ch0103/10">
+    var R1 = +prompt();
+    var R2 = +prompt();
+    var R;
+    R = 1 / (1 / R1 + 1 / R2);
+
+    console.log(R.toFixed(2));
+</script>
+
+<script id="ch0103/11">
+    var R1 = +prompt();
+    var R2 = +prompt();
+    var R;
+    R = 1 / (1 / R1 + 1 / R2);
+
+    console.log(R.toFixed(2));
+</script>
+
+<script id="ch0103/11">
+    var F1 = +prompt();
+    var F2 = +prompt();
+    var r;
+    r = F1 % F2;
+
+    console.log(r);
+</script>
+
+<script id="ch0103/12">
+    var R = +prompt();
+    var PPII = parseFloat(Math.PI.toFixed(2));
+    var V;
+    V = R * R * R * 4 / 3 * PPII;
+
+    console.log(V.toFixed(2));
+</script>
+
+<script id="ch0103/13">
+    var num = +prompt();
+    // var sum = (num % 10).toFixed(0) +  ((num/10)%10).toFixed(0) +(num/100).toFixed(0);
+    var a = (num % 10).toFixed(0);
+    // var b =  ((num / 10) % 10).toFixed(0);
+    var b = Math.floor(num / 10);
+    var bb = Math.floor(b % 10).toFixed(0);
+    var c = Math.floor(num / 100).toFixed(0);
+
+
+    console.log(a + bb + c);
+</script>
+
+<script id="ch0103/14">
+    var h = +prompt();
+    var r = +prompt();
+    // var sum = (num % 10).toFixed(0) +  ((num/10)%10).toFixed(0) +(num/100).toFixed(0);
+    var V = Math.PI * r * r * h;
+    var count = 20 * 1000 / V;
+    console.log(Math.ceil(count));
+</script>
+
+
+<script id="ch0103/15">
+    var n = +prompt();
+    var x = +prompt();
+    var y = +prompt();
+    // var sum = (num % 10).toFixed(0) +  ((num/10)%10).toFixed(0) +(num/100).toFixed(0);
+
+    var count = n - Math.ceil(y / x);
+    console.log(count);
+</script>
+
+
+
+<script id="ch0103/16">
+    var A1 = +prompt();
+    var A2 = +prompt();
+    var B1 = +prompt();
+    var B2 = +prompt();
+
+    // var sum = (num % 10).toFixed(0) +  ((num/10)%10).toFixed(0) +(num/100).toFixed(0);
+
+    var distance = Math.sqrt((B1 - A1) * (B1 - A1) + (B2 - A2) * (B2 - A2));
+    console.log(distance.toFixed(3));
+</script>
+
+
+<script id="ch0103/17">
+    var x1 = +prompt();
+    var y1 = +prompt();
+    var x2 = +prompt();
+    var y2 = +prompt();
+    var x3 = +prompt();
+    var y3 = +prompt();
+    var a = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+    var b = Math.sqrt((x3 - x1) * (x3 - x1) + (y3 - y1) * (y3 - y1));
+    var c = Math.sqrt((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2));
+    var p = (a + b + c) / 2;
+    var S = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+    // var sum = (num % 10).toFixed(0) +  ((num/10)%10).toFixed(0) +(num/100).toFixed(0);
+
+
+    console.log(S.toFixed(2));
+</script>
+
+<script id="ch0103/18">
+    var t1 = +prompt();
+    var t2 = +prompt();
+    var t3 = +prompt();
+    var d = t2 - t1;
+    var an = t1 + d * (t3 - 1);
+    console.log(an);
+</script>
+
+<script id="ch0103/19">
+    var a = +prompt();
+    var b = +prompt();
+    console.log(a * b);
+</script>
+
+
+<script id="ch0103/20">
+    var a = +prompt();
+    var output = Math.pow(2, a);
+    console.log(output);
+</script>
