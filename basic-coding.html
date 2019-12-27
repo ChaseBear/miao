@@ -56,7 +56,7 @@
     var a = +prompt();
     var b = +prompt();
 
-    console.log('%.7f', Math.floor(a / b));
+    console.log((a / b).toFixed(9));
 </script>
 
 <script id="ch0103/06">
@@ -64,7 +64,7 @@
     var b = +prompt();
 
 
-    console.log(Math.floor(b / a).toFixed(9));
+    console.log((b / a * 100).toFixed(3) + '%');
 </script>
 
 <script id="ch0103/07">
@@ -87,7 +87,7 @@
 
 <script id="ch0103/09">
     var r = +prompt();
-    var PPII = number(Math.PI.toFixed(5));
+    var PPII = Math.PI;
     d = r * 2;
     c = r * 2 * PPII;
     s = PPII * r * r;
@@ -107,21 +107,12 @@
 </script>
 
 <script id="ch0103/11">
-    var R1 = +prompt();
-    var R2 = +prompt();
-    var R;
-    R = 1 / (Math.floor(1 / R1) + Math.floor(1 / R2));
-
-    console.log(R.toFixed(2));
-</script>
-
-<script id="ch0103/11">
     var F1 = +prompt();
     var F2 = +prompt();
     var r;
     r = F1 % F2;
 
-    console.log(r);
+    console.log(r.toFixed(4));
 </script>
 
 <script id="ch0103/12">
