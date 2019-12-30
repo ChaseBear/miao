@@ -357,7 +357,7 @@
 
 <script id="ch0104/11">
     var a = Number(prompt());
-    if (a % 3 === 0 && a % 5 === 0)
+    if (a % 3 === 0 && a % 5 === 0 && a % 1 == 0)
         console.log('YES');
     else
         console.log('NO');
@@ -522,7 +522,7 @@
 </script>
 
 <script id="ch0104/20">
-    var a = +prompt();
+  var a = +prompt();
     var b = +prompt();
     var c = +prompt();
     var x;
@@ -530,24 +530,25 @@
     var delta = b * b - 4 * a * c;
     var t;
     if (delta > 0) {
-        t = Math.sqrt(delta) / (2 * a);
-        var x1 = (-b + t.toFixed(5)) / (2 * a);
-        var x2 = (-b - t.toFixed(5)) / (2 * a);
-        console.log(('x1' + '=' + x1) + '\n' + ('x2' + '=' + x2));
+        t = Math.sqrt(delta);
+        var x1 = (-b + t) / (2 * a);
+        var x2 = (-b - t) / (2 * a);
+        console.log(('x1' + '=' + x1.toFixed(5)) + '\n' + ('x2' + '=' + x2.toFixed(5)));
     }
 
     else if (delta === 0) {
-        t = Math.sqrt(delta) / (2 * a);
-        var x1 = (-b + t.toFixed(5)) / (2 * a);
-        var x2 = (-b - t.toFixed(5)) / (2 * a);
-        console.log('x1' + '=' + 'x2' + '=' + x1);
+        t = Math.sqrt(delta);
+        var x1 = (-b + t) / (2 * a);
+        var x2 = (-b - t) / (2 * a);
+        console.log('x1' + '=' + 'x2' + '=' + x1.toFixed(5));
 
     }
 
     else {
+        p = -b / (2 * a);
         t = Math.sqrt(-delta) / (2 * a);
-        var x1 = (-b / 2 * a) + '+' + (t.toFixed(5) + 'i');
-        var x2 = (-b / 2 * a) + '-' + (t.toFixed(5) + 'i');
+        var x1 = p.toFixed(5) + '+' + (t.toFixed(5) + 'i');
+        var x2 = p.toFixed(5) + '-' + (t.toFixed(5) + 'i');
         console.log(('x1' + '=' + x1) + '\n' + ('x2' + '=' + x2));
     }
 
