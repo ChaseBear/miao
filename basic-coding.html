@@ -357,11 +357,10 @@
 
 <script id="ch0104/11">
     var a = Number(prompt());
-    if (a % 3 === 0 && a % 5 === 0 && a % 1 == 0)
+    if ((a % 2 === 0) || a === 7)
         console.log('YES');
     else
         console.log('NO');
-
 </script>
 
 <script id="ch0104/12">
@@ -501,28 +500,7 @@
 </script>
 
 <script id="ch0104/19">
-    var x = +prompt();
-    var y = +prompt();
-    var z = prompt();
-    if (z === '+') {
-
-        console.log(x + y);
-    }
-
-    else if (z === '-') {
-
-        console.log(x - y);
-    }
-
-    else if (z === '*') {
-
-        console.log(x * y);
-    }
-
-</script>
-
-<script id="ch0104/20">
-  var a = +prompt();
+    var a = +prompt();
     var b = +prompt();
     var c = +prompt();
     var x;
@@ -533,7 +511,7 @@
         t = Math.sqrt(delta);
         var x1 = (-b + t) / (2 * a);
         var x2 = (-b - t) / (2 * a);
-        console.log(('x1' + '=' + x1.toFixed(5)) + '\n' + ('x2' + '=' + x2.toFixed(5)));
+        console.log(('x1' + '=' + x1.toFixed(5)) + ';' + ('x2' + '=' + x2.toFixed(5)));
     }
 
     else if (delta === 0) {
@@ -549,7 +527,7 @@
         t = Math.sqrt(-delta) / (2 * a);
         var x1 = p.toFixed(5) + '+' + (t.toFixed(5) + 'i');
         var x2 = p.toFixed(5) + '-' + (t.toFixed(5) + 'i');
-        console.log(('x1' + '=' + x1) + '\n' + ('x2' + '=' + x2));
+        console.log(('x1' + '=' + x1) + ';' + ('x2' + '=' + x2));
     }
 
 </script>
