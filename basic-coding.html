@@ -540,7 +540,6 @@
     for (var i = 0; i < n; i++) {
         var st = parseInt(prompt());
         sum = sum + st;
-        console.log('sum' + parseInt(sum));
     }
     var avg = sum / n;
     console.log(avg.toFixed(2));
@@ -573,32 +572,35 @@
 
 <script id="ch0105/04">
     var n = +prompt();
-    var max = 0;
+    var sum = 0;
     for (var i = 0; i < n; i++) {
         var p = +prompt();
-        if (max < p)
-            max = p;
+        sum+=p;
     }
-    console.log(max);
+    console.log(sum);
+    console.log((sum/n).toFixed(5));
 </script>
 
 <script id="ch0105/05">
     var n = +prompt();
     var max = 0;
-    var min = 0;
     for (var i = 0; i < n; i++) {
-        var p = +prompt(); if (max < p) max = p; if (min > p)
-            min = p;
+        var p = +prompt();
+         if (max < p)
+         max = p;
     }
-    console.log(max - min);
+    console.log(max);
 </script>
 
 <script id="ch0105/06">
     var n = +prompt();
     var max = 0;
-    var min = 0;
+    var min = 1000;
     for (var i = 0; i < n; i++) {
-        var p = +prompt(); if (max < p) max = p; if (min > p)
+        var p = +prompt();
+        if (max < p)
+            max = p;
+        if (min > p)
             min = p;
     }
     console.log(max - min);
@@ -667,12 +669,33 @@
     Max = t * 17 + sum;
 
     console.log(Math.floor((Max + sum) * (t + 1) / 2));
-
-
-
 </script>
 
+<script id="ch0105/11">
+  var m = +prompt();
+  var a=0,b=0,c=0;
+  for(var i = 0;i<m;i++)
+  {
+     var x = +prompt();
+     if(x === 1)
+     {
+         a++;
+     }
 
+     else if(x === 5)
+     {
+         b++;
+     }
+
+     else if (x === 10) {
+         c++;
+     }
+  }
+  console.log(a);
+  console.log(b);
+  console.log(c);
+
+</script>
 <script id="ch0105/12">
     var m = +prompt();
     var n = +prompt();
@@ -723,13 +746,13 @@
     var money;
     for (var i = 1; i < 21; i++) {
         total = total * (1 + K * 0.01);
-        money = N * (i);
+        money = N * (i+1);
         if (money >= total) {
-            console.log(i + 1);
+            console.log(i+1);
             break;
         }
     }
-    if (i > 21)
+    if (i >= 21)
         console.log("impossible");
 </script>
 
@@ -807,7 +830,7 @@
     var sum = 0;
     sum += (Math.pow(2, 10 - 1) - 1) / Math.pow(2, 10 - 2) * h + h;
     h_later = Math.pow(0.5, 10) * h;
-    console.log(sum);
+    console.log(sum.toFixed(4));
     console.log(h_later.toFixed(7));
 
 </script>
@@ -829,6 +852,7 @@
         }
 
     }
+    console.log('End');
 </script>
 
 <script id="ch0105/22">
@@ -1026,16 +1050,23 @@
     var N = +prompt();
     var M = +prompt();
     var array = new Array(N+1);
+    var  str='';
     for (var index = 0; index < N + 1; index++) {
         array[index] = 1;
     }
 
     for (var j = 1; j < N + 1; j++) {
+
         inverse(j);
         if (array[j] == 0)
-            console.log(j);
-    }
+        {
+            str+=j;
+            str+=',';
+        }
 
+    }
+    str[(str.length-1)]=' ';
+     console.log(str)
 
     function inverse(n) {
         for (var k = 1; k < N + 1; k++) {
@@ -1118,7 +1149,7 @@
         for (var i = 1; i < n + 1; i++) {
             sum = sum + 1/multiply(i);
         }
-        console.log(sum +1);
+        console.log((sum+1).toFixed(10));
 
         function multiply(a) {
             var num = 1;
@@ -1201,42 +1232,8 @@
 </script>
 
 
+
 <script id="ch0105/40">
-         var n = +prompt();
-            var p, sum = 0;
-            for (var i = 1; i < n + 1; i++) {
-                if (i % 7 != 0) {
-                    p = digit(i);
-                    if (p != -1)
-                        sum += p;
-                }
-
-            }
-
-            console.log(sum);
-
-
-            function digit(a) {
-
-                var x, y, z;
-                x = a % 10;
-                y = Math.floor(a / 10);
-
-                if (x !== 7 && y !== 7) {
-                    a = a * a;
-                    return a;
-                }
-
-                else {
-                    return -1;
-                }
-
-            }
-</script>
-
-
-
-<script id="ch0105/41">
 
         var n = +prompt();
          var count = 0;
@@ -1288,7 +1285,7 @@
 
 
 
-<script id="ch0105/43">
+<script id="ch0105/42">
 var a = +prompt();
 var b = +prompt();
 var c = prompt();
@@ -1323,62 +1320,72 @@ var line = '\n';
 </script>
 
 <script id="ch0105/43">
-   var a = +prompt();
-   var temp = 0;
-   for(var i = 2 ; i < Math.floor(Math.sqrt(a)); i++)
-   {
-          if(a % i == 0)
-          {
-            a=a/i;
-            if(temp < a)
-            temp = a;
-          }
-   }
+        var a = +prompt();
+        var temp = a;
+        for (var i = 2; i <= Math.floor(Math.sqrt(a)); i++) {
+            if (a % i == 0) {
+                a = a / i;
+                i = i - 1;
+                if (temp > a)
+                    temp = a;
+            }
+        }
 
-   console.log(temp);
+        console.log(temp);
 </script>
 
 
 <script id="ch0105/44">
     var a = +prompt();
     var temp = a;
-    for (var i = 2; i <= Math.floor(Math.sqrt(a)); i++) {
-        if (a % i == 0) {
-            a = a / i;
-            i = i - 1;
-            if (temp > a)
-                temp = a;
-        }
-    }
+     a = a * a;
+    var value = 0;
+    var re_value = 0;
+    var count = 0;
+    for (var i = 2; i <= a; i++) {
+           re_value = prime_num(i);
+           if(re_value === 1)
+           {
+                value = i;
+                count++;
+                if( temp == count)
+                break;
+           }
 
-    console.log(temp);
+    }
+       console.log(value);
+   function prime_num(n){
+       for(var i = 2 ; i <= Math.floor(Math.sqrt(n)); i++)
+       {
+            if( n % i === 0)
+             return -1;
+       }
+
+       return 1;
+   }
+
 </script>
 
 
 <script id="ch0105/45">
-  var n = +prompt();
-  var array=[0];
-  var temp = 0;
   var count = 1;
-  var i = 1;
+  var  counter = 0;
+  var c = 0;
+  var a = +prompt();
   for(var count= 1;count<=n ; count++)
   {
-    add(i);
-    i++;
-
+    for(var i = 1 ; i <= count;i++)
+    {
+        c=c+count;
+        counter++;
+        if(counter === a)
+        break;
+    }
+     if (counter === a)
+          break;
   }
+  console.log(c);
 
-  function add(i)
-  {
-     for(var j= i ; j <= temp + i ; j++)
-     {
-        array[j] = i;
-     }
-     i = j;
-     temp += i;
-     console.log(array);
-    return 0;
-  }
 
 </script>
 
