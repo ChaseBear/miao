@@ -534,8 +534,6 @@
 
 <script id="ch0105/01">
     var n = +prompt();
-    console.log(n);
-
     var sum = 0;
     for (var i = 0; i < n; i++) {
         var st = parseInt(prompt());
@@ -1167,7 +1165,7 @@
         for (var i = 0; i < n ; i++) {
             sum = sum + multiply(x,n-i);
         }
-        console.log(sum + 1);
+        console.log((sum + 1).toFixed(2));
 
         function multiply(x,a) {
             var num;
@@ -1302,17 +1300,21 @@ var line = '\n';
             if(((i >= 1)&&(i < a-1)) && ((j >= 1) && (j < b - 1)))
             {
                 e+=' ';
+                e += ' ';
             }
             else{
                     e += str;
+                    e += ' ';
             }
         }
 
         else{
               e += str;
+              e += ' ';
         }
 
     }
+     e+= line;
      e+= line;
 
  }
@@ -1372,7 +1374,7 @@ var line = '\n';
   var  counter = 0;
   var c = 0;
   var a = +prompt();
-  for(var count= 1;count<=n ; count++)
+  for(var count= 1;count<=a ; count++)
   {
     for(var i = 1 ; i <= count;i++)
     {
