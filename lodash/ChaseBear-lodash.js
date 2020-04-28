@@ -2,7 +2,10 @@
 //     console.log(key, value);
 // }
 
-
+/****
+ * 1.lodash库
+ * 2.一些API函数
+ */
 
 var _ = {
     compact: function (array) {
