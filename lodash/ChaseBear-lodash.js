@@ -9,7 +9,7 @@
 
  */
 
-var _ = {
+var chasebear = {
     compact: function (array) {
         return array.filter((item, index, array) =>
             !(item === 0 || item === null || item === "" || item === false || item === undefined || isNaN(item) === true)
