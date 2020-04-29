@@ -5,6 +5,8 @@
 /****
  * 1.lodash库
  * 2.一些API函数
+ * 3.lodash练习
+
  */
 
 var _ = {
